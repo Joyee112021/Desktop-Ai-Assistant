@@ -1,0 +1,250 @@
+{
+  "models": [
+    {
+      "id": "tinyllama-1.1b-q4km",
+      "name": "TinyLlama 1.1B Chat",
+      "family": "TinyLlama",
+      "parameter_size": "1.1B",
+      "quantization": "Q4_K_M",
+      "summary": "The lightest option. Great for very small PCs, testing, and fast UI demos.",
+      "recommended_for": "Entry-level CPUs, 8 GB RAM, quick prototypes, and automation helpers.",
+      "badge": "Fastest",
+      "repo": "TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF",
+      "primary_file": "tinyllama-1.1b-chat-v1.0.Q4_K_M.gguf",
+      "candidate_files": [
+        "tinyllama-1.1b-chat-v1.0.Q4_K_M.gguf"
+      ],
+      "auxiliary_files": [],
+      "capabilities": [
+        "chat"
+      ],
+      "approx_size_gb": 0.7,
+      "minimum_ram_gb": 4,
+      "default_profile_id": "low"
+    },
+    {
+      "id": "gemma-2-2b-q4km",
+      "name": "Gemma 2 2B Instruct",
+      "family": "Gemma",
+      "parameter_size": "2B",
+      "quantization": "Q4_K_M",
+      "summary": "A small everyday assistant model that stays lightweight while feeling more capable than tiny models.",
+      "recommended_for": "Low to mid-range CPUs with 8 GB RAM.",
+      "badge": "Compact",
+      "repo": "bartowski/gemma-2-2b-it-GGUF",
+      "primary_file": "gemma-2-2b-it-Q4_K_M.gguf",
+      "candidate_files": [
+        "gemma-2-2b-it-Q4_K_M.gguf"
+      ],
+      "auxiliary_files": [],
+      "capabilities": [
+        "chat"
+      ],
+      "approx_size_gb": 1.7,
+      "minimum_ram_gb": 6,
+      "default_profile_id": "medium"
+    },
+    {
+      "id": "qwen-2.5-1.5b-q4km",
+      "name": "Qwen 2.5 1.5B Instruct",
+      "family": "Qwen",
+      "parameter_size": "1.5B",
+      "quantization": "Q4_K_M",
+      "summary": "A very small modern instruct model with better multilingual behavior than most ultra-light options.",
+      "recommended_for": "Low to mid-range CPUs, multilingual users, and 8 GB RAM systems.",
+      "badge": "Tiny Multilingual",
+      "repo": "bartowski/Qwen2.5-1.5B-Instruct-GGUF",
+      "primary_file": "Qwen2.5-1.5B-Instruct-Q4_K_M.gguf",
+      "candidate_files": [
+        "Qwen2.5-1.5B-Instruct-Q4_K_M.gguf"
+      ],
+      "auxiliary_files": [],
+      "capabilities": [
+        "chat"
+      ],
+      "approx_size_gb": 1.1,
+      "minimum_ram_gb": 6,
+      "default_profile_id": "medium"
+    },
+    {
+      "id": "smollm2-1.7b-q4km",
+      "name": "SmolLM2 1.7B Instruct",
+      "family": "SmolLM2",
+      "parameter_size": "1.7B",
+      "quantization": "Q4_K_M",
+      "summary": "A compact assistant model that stays fast on CPU while feeling more stable than toy models.",
+      "recommended_for": "Budget desktops, automation helpers, and users who want a quick local assistant.",
+      "badge": "Tiny Fast",
+      "repo": "bartowski/SmolLM2-1.7B-Instruct-GGUF",
+      "primary_file": "SmolLM2-1.7B-Instruct-Q4_K_M.gguf",
+      "candidate_files": [
+        "SmolLM2-1.7B-Instruct-Q4_K_M.gguf"
+      ],
+      "auxiliary_files": [],
+      "capabilities": [
+        "chat"
+      ],
+      "approx_size_gb": 1.3,
+      "minimum_ram_gb": 6,
+      "default_profile_id": "medium"
+    },
+    {
+      "id": "llama-3.2-3b-q4km",
+      "name": "Llama 3.2 3B Instruct",
+      "family": "Llama",
+      "parameter_size": "3B",
+      "quantization": "Q4_K_M",
+      "summary": "A balanced small model with modern instruction tuning and better quality than ultra-tiny options.",
+      "recommended_for": "Mid-range laptops and desktops with 8 to 12 GB RAM.",
+      "badge": "Balanced Small",
+      "repo": "bartowski/Llama-3.2-3B-Instruct-GGUF",
+      "primary_file": "Llama-3.2-3B-Instruct-Q4_K_M.gguf",
+      "candidate_files": [
+        "Llama-3.2-3B-Instruct-Q4_K_M.gguf"
+      ],
+      "auxiliary_files": [],
+      "capabilities": [
+        "chat"
+      ],
+      "approx_size_gb": 2.2,
+      "minimum_ram_gb": 8,
+      "default_profile_id": "medium"
+    },
+    {
+      "id": "phi-3.5-mini-q4km",
+      "name": "Phi-3.5 Mini Instruct",
+      "family": "Phi",
+      "parameter_size": "3.8B",
+      "quantization": "Q4_K_M",
+      "summary": "A compact model with noticeably better reasoning than tiny models while staying fast on CPU.",
+      "recommended_for": "Mid-range laptops and desktops with 8 to 16 GB RAM.",
+      "badge": "Lightweight",
+      "repo": "QuantFactory/Phi-3.5-mini-instruct-GGUF",
+      "primary_file": "Phi-3.5-mini-instruct.Q4_K_M.gguf",
+      "candidate_files": [
+        "Phi-3.5-mini-instruct.Q4_K_M.gguf"
+      ],
+      "auxiliary_files": [],
+      "capabilities": [
+        "chat"
+      ],
+      "approx_size_gb": 2.4,
+      "minimum_ram_gb": 8,
+      "default_profile_id": "normal"
+    },
+    {
+      "id": "mistral-7b-q4km",
+      "name": "Mistral 7B Instruct v0.3",
+      "family": "Mistral",
+      "parameter_size": "7B",
+      "quantization": "Q4_K_M",
+      "summary": "A widely used instruct model with strong general text quality and broad compatibility.",
+      "recommended_for": "Desktop CPUs with 14 to 16 GB RAM.",
+      "badge": "Popular",
+      "repo": "bartowski/Mistral-7B-Instruct-v0.3-GGUF",
+      "primary_file": "Mistral-7B-Instruct-v0.3-Q4_K_M.gguf",
+      "candidate_files": [
+        "Mistral-7B-Instruct-v0.3-Q4_K_M.gguf"
+      ],
+      "auxiliary_files": [],
+      "capabilities": [
+        "chat"
+      ],
+      "approx_size_gb": 4.1,
+      "minimum_ram_gb": 14,
+      "default_profile_id": "normal"
+    },
+    {
+      "id": "qwen-2.5-7b-q4km",
+      "name": "Qwen 2.5 7B Instruct",
+      "family": "Qwen",
+      "parameter_size": "7B",
+      "quantization": "Q4_K_M",
+      "summary": "A popular instruct model with strong multilingual output and better long-form answers than smaller models.",
+      "recommended_for": "Desktop CPUs with 16 GB RAM, multilingual use, and users who want stronger quality without going to the heaviest tier.",
+      "badge": "Popular Multilingual",
+      "repo": "bartowski/Qwen2.5-7B-Instruct-GGUF",
+      "primary_file": "Qwen2.5-7B-Instruct-Q4_K_M.gguf",
+      "candidate_files": [
+        "Qwen2.5-7B-Instruct-Q4_K_M.gguf"
+      ],
+      "auxiliary_files": [],
+      "capabilities": [
+        "chat"
+      ],
+      "approx_size_gb": 4.7,
+      "minimum_ram_gb": 16,
+      "default_profile_id": "high"
+    },
+    {
+      "id": "llama-3.1-8b-q4km",
+      "name": "Llama 3.1 8B Instruct",
+      "family": "Llama",
+      "parameter_size": "8B",
+      "quantization": "Q4_K_M",
+      "summary": "The recommended all-round choice for this project. Good quality, good compatibility, and solid CPU behavior.",
+      "recommended_for": "Modern desktop CPUs such as Intel Core i7 or Ryzen 7 with 16 GB or more RAM.",
+      "badge": "Recommended",
+      "repo": "bartowski/Meta-Llama-3.1-8B-Instruct-GGUF",
+      "primary_file": "Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf",
+      "candidate_files": [
+        "meta-llama-3.1-8b-instruct-q4_k_m.gguf",
+        "Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf"
+      ],
+      "auxiliary_files": [],
+      "capabilities": [
+        "chat"
+      ],
+      "approx_size_gb": 4.9,
+      "minimum_ram_gb": 16,
+      "default_profile_id": "high"
+    },
+    {
+      "id": "llava-1.5-7b-q4k",
+      "name": "LLaVA 1.5 7B Vision",
+      "family": "LLaVA",
+      "parameter_size": "7B",
+      "quantization": "Q4_K",
+      "summary": "Vision-capable model for screenshots and image understanding. Use this when you want desktop view or image uploads.",
+      "recommended_for": "Desktop CPUs with 16 GB or more RAM and users who need screenshot or image analysis.",
+      "badge": "Vision",
+      "repo": "mys/ggml_llava-v1.5-7b",
+      "primary_file": "ggml-model-q4_k.gguf",
+      "candidate_files": [
+        "ggml-model-q4_k.gguf"
+      ],
+      "auxiliary_files": [
+        "mmproj-model-f16.gguf"
+      ],
+      "capabilities": [
+        "chat",
+        "vision"
+      ],
+      "approx_size_gb": 4.6,
+      "minimum_ram_gb": 16,
+      "default_profile_id": "normal"
+    },
+    {
+      "id": "mistral-nemo-12b-q4km",
+      "name": "Mistral Nemo Instruct 12B",
+      "family": "Mistral",
+      "parameter_size": "12B",
+      "quantization": "Q4_K_M",
+      "summary": "The strongest built-in text option in this catalog. Better answer quality, but slower and much heavier.",
+      "recommended_for": "High-end CPUs, 24 GB or more RAM, and users who prefer quality over latency.",
+      "badge": "Strongest",
+      "repo": "bartowski/Mistral-Nemo-Instruct-2407-GGUF",
+      "primary_file": "Mistral-Nemo-Instruct-2407-Q4_K_M.gguf",
+      "candidate_files": [
+        "Mistral-Nemo-Instruct-2407-Q4_K_M.gguf"
+      ],
+      "auxiliary_files": [],
+      "capabilities": [
+        "chat"
+      ],
+      "approx_size_gb": 7.2,
+      "minimum_ram_gb": 24,
+      "default_profile_id": "ultra"
+    }
+  ]
+}
