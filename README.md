@@ -267,4 +267,4 @@ That is normal for local inference. Use warmup, choose a smaller model, or lower
 
 Application code is released under the MIT License. Third-party models have their own licenses and usage terms. Always review the original model card before redistributing or packaging a model with your release.
 
-## THIS README.md IS MADE BY GEMINI 3.1 PRO
+## THIS README.md IS MADE BY CHATGPT 5.4
