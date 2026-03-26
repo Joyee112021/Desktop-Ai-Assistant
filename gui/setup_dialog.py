@@ -13,6 +13,7 @@ from PySide6.QtWidgets import (
     QHBoxLayout,
     QLabel,
     QLineEdit,
+    QMessageBox,
     QProgressBar,
     QRadioButton,
     QScrollArea,
@@ -542,6 +543,7 @@ class ModelLibraryDialog(QDialog):
         self.settings = UserSettings.from_dict(settings.to_dict())
         self.system_info = system_info
         self._download_worker = None
+        self._download_error_message: str | None = None
 
         self.setModal(True)
         self.resize(860, 820)
@@ -678,6 +680,7 @@ class ModelLibraryDialog(QDialog):
 
     def _select_model(self, model_id: str):
         self.settings.selected_model_id = model_id
+        self._download_error_message = None
         for option_id, card in self.model_cards.items():
             card.set_selected(option_id == model_id)
             card.refresh_install_state()
@@ -719,6 +722,12 @@ class ModelLibraryDialog(QDialog):
         model = self._selected_model()
         can_save = bool(model and model.is_ready() and self._localized_backend_issue(model) is None)
         self.download_button.setEnabled(model is not None and self._download_worker is None)
+        if self._download_error_message:
+            self.status_label.setStyleSheet(f"color: {COLORS['danger']};")
+            self.status_label.setText(
+                tr("setup_download_fail", self.settings.interface_language, message=self._download_error_message)
+            )
+            return
         self.status_label.setStyleSheet(
             f"color: {COLORS['success'] if can_save else COLORS['warning']};"
         )
@@ -736,12 +745,15 @@ class ModelLibraryDialog(QDialog):
         if self._download_worker is not None and self._download_worker.isRunning():
             return
         if model.is_ready():
+            self._download_error_message = None
             self.status_label.setText(tr("setup_download_existing", self.settings.interface_language, name=model.name))
             return
 
+        self._download_error_message = None
         self.download_progress.setVisible(True)
         self.download_progress.setRange(0, 100)
         self.download_progress.setValue(0)
+        self.download_progress.setFormat("0%")
         self.status_label.setText(
             tr("setup_download_status", self.settings.interface_language, name=model.name, folder=Path(MODEL_DIR).name)
         )
@@ -750,6 +762,7 @@ class ModelLibraryDialog(QDialog):
         self._download_worker.signal_done.connect(self._on_download_done)
         self._download_worker.signal_error.connect(self._on_download_error)
         self._download_worker.start()
+        self.download_button.setEnabled(False)
 
     def _on_download_progress(self, percent: int, status_text: str):
         self.download_progress.setVisible(True)
@@ -769,6 +782,7 @@ class ModelLibraryDialog(QDialog):
     def _on_download_done(self, saved_path: str):
         self.download_progress.setVisible(False)
         self._download_worker = None
+        self._download_error_message = None
         for card in self.model_cards.values():
             card.refresh_install_state()
         self.status_label.setText(
@@ -779,8 +793,14 @@ class ModelLibraryDialog(QDialog):
     def _on_download_error(self, message: str):
         self.download_progress.setVisible(False)
         self._download_worker = None
+        self._download_error_message = message
         self.status_label.setText(tr("setup_download_fail", self.settings.interface_language, message=message))
         self.status_label.setStyleSheet(f"color: {COLORS['danger']};")
+        QMessageBox.warning(
+            self,
+            APP_NAME,
+            tr("setup_download_fail", self.settings.interface_language, message=message),
+        )
         self._update_save_state()
 
     def _open_models_folder(self):
