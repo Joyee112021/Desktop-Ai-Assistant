@@ -2,10 +2,10 @@
 
 > Your local AI cockpit for chat, screenshots, files, search, and long-term knowledge.
 
-[![Stars](https://img.shields.io/badge/Stars-Coming_Soon-0b1f2b?style=for-the-badge)](https://github.com/)
+[![Stars](https://img.shields.io/github/stars/Joyee112021/Desktop-Ai-Assistant?style=for-the-badge&color=0b1f2b)](https://github.com/Joyee112021/Desktop-Ai-Assistant)
 [![License](https://img.shields.io/badge/License-MIT-0b1f2b?style=for-the-badge)](./LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.12-0b1f2b?style=for-the-badge)](https://www.python.org/downloads/windows/)
-[![Releases](https://img.shields.io/badge/Downloads-Coming_Soon-0b1f2b?style=for-the-badge)](https://github.com/)
+[![Downloads](https://img.shields.io/github/downloads/Joyee112021/Desktop-Ai-Assistant/total?style=for-the-badge&color=0b1f2b)](https://github.com/Joyee112021/Desktop-Ai-Assistant/releases)
 
 Desktop AI Assistant is a polished Windows desktop app for running local GGUF models with a product-style floating UI. It is designed for people who want a clean local assistant with setup automation, model downloads, screenshot analysis, file context, lightweight long-term memory, and tool-routed workflows without needing a browser tab farm.
 
