@@ -9,8 +9,6 @@
 
 Desktop AI Assistant is a polished Windows desktop app for running local GGUF models with a product-style floating UI. It is designed for people who want a clean local assistant with setup automation, model downloads, screenshot analysis, file context, lightweight long-term memory, and tool-routed workflows without needing a browser tab farm.
 
-## Demo
-
 ## Why This Project
 
 - Local-first: your prompts stay on your machine
