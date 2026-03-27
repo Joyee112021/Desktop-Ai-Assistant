@@ -11,22 +11,6 @@ Desktop AI Assistant is a polished Windows desktop app for running local GGUF mo
 
 ## Demo
 
-### App Preview
-
-Add your main UI screenshot or animated GIF here.
-
-```text
-/docs/demo-main.gif
-```
-
-### Setup Wizard Preview
-
-Add your setup wizard GIF or screenshot sequence here.
-
-```text
-/docs/demo-setup.gif
-```
-
 ## Why This Project
 
 - Local-first: your prompts stay on your machine
